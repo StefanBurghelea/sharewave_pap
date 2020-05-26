@@ -68,4 +68,11 @@ Route::namespace('Api')->group(function(){
     Route::post('/votes', 'VoteController@store');
     Route::put('/votes/{id}', 'VoteController@update');
 
+    //LOGIN--------------------------------------------------------------
+
+    Route::post('login','UserController@login');
+    Route::post('register','UserController@register');
+
+    
+
 });
