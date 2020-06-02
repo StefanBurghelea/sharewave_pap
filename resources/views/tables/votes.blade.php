@@ -30,7 +30,9 @@
                         <td scope="row">{{$vote->id_user}}</td>
                     <td>
                         <a class="btn btn-primary btn-sm" href="editar/{{ $vote->id }}">Editar</a> 
-                        <a class="btn btn-danger btn-sm" href="excluir/{{ $vote->id }}">Excluir</a>
+                        @csrf
+                        @method('delete')
+                        <a class="btn btn-danger btn-sm" href="/votes/delete/{{ $vote->id }}">Delete</a>
                     </td> 
                     </tr>
                     @endforeach

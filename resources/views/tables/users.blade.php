@@ -38,7 +38,10 @@
                         <td scope="row">{{$user->created_at}}</td>
                     <td>
                         <a class="btn btn-primary btn-sm" href="editar/{{ $user->id }}">Editar</a> 
-                        <a class="btn btn-danger btn-sm" href="excluir/{{ $user->id }}">Excluir</a>
+                        @csrf
+                        @method('delete')
+                        <a class="btn btn-danger btn-sm" href="/users/delete/{{ $user->id }}">Delete</a>
+                    
                     </td> 
                     </tr>
                     @endforeach

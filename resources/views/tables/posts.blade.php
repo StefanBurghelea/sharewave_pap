@@ -38,7 +38,9 @@
                         <td scope="row">{{$post->created_at}}</td>
                     <td>
                         <a class="btn btn-primary btn-sm" href="editar/{{ $post->id }}">Editar</a> 
-                        <a class="btn btn-danger btn-sm" href="excluir/{{ $post->id }}">Excluir</a>
+                        @csrf
+                        @method('delete')
+                        <a class="btn btn-danger btn-sm" href="/posts/delete/{{ $post->id }}">Delete</a>
                     </td> 
                     </tr>
                     @endforeach

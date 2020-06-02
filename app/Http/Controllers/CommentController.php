@@ -15,4 +15,14 @@ class CommentController extends Controller
 
         return view ('tables/comments',$array_comments);
     }
+
+    public function delete($id){
+
+        $comment = Comment::find($id);
+        $commnet->delete();
+    
+        
+        return redirect('tables/comments');
+
+    }
 }

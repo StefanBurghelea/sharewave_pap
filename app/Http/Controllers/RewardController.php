@@ -16,4 +16,14 @@ class RewardController extends Controller
         return view ('tables/rewards',$array_rewards);
 
     }
+
+    public function delete($id){
+
+        $reward = Reward::find($id);
+        $reward->delete();
+    
+        
+        return redirect('tables/rewards');
+
+    }
 }

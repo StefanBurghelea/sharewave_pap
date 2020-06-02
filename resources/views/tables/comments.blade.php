@@ -32,7 +32,9 @@
                         <td scope="row">{{$comment->created_at}}</td>
                     <td>
                         <a class="btn btn-primary btn-sm" href="editar/{{ $comment->id }}">Editar</a> 
-                        <a class="btn btn-danger btn-sm" href="excluir/{{ $comment->id }}">Excluir</a>
+                        @csrf
+                        @method('delete')
+                        <a class="btn btn-danger btn-sm" href="/comments/delete/{{ $comment->id }}">Delete</a>
                     </td> 
                     </tr>
                     @endforeach

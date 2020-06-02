@@ -28,5 +28,15 @@ class VoteController extends Controller
 
         return view('tables.votes', compact('votes'));
     }
+
+    public function delete($id){
+
+        $vote = Vote::find($id);
+        $vote->delete();
+    
+        
+        return redirect('tables/votes');
+
+    }
     
 }
