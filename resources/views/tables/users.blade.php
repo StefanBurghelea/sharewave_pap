@@ -37,7 +37,6 @@
                         <td scope="row">{{$user->privileges}}</td>
                         <td scope="row">{{$user->created_at}}</td>
                     <td>
-                        <a class="btn btn-primary btn-sm" href="editar/{{ $user->id }}">Editar</a> 
                         @csrf
                         @method('delete')
                         <a class="btn btn-danger btn-sm" href="/users/delete/{{ $user->id }}">Delete</a>

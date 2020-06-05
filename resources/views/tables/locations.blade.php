@@ -31,7 +31,6 @@
                         <td scope="row">{{$location->longitude}}</td>
                         <td scope="row">{{$location->latitude}}</td>
                     <td>
-                        <a class="btn btn-primary btn-sm" href="editar/{{ $location->id }}">Editar</a> 
                         @csrf
                         @method('delete')
                         <a class="btn btn-danger btn-sm" href="/locations/delete/{{ $location->id }}">Delete</a>

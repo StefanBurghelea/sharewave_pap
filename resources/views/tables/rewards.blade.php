@@ -27,7 +27,6 @@
                         <td scope="row">{{$reward->points}}</td>
                         <td scope="row">{{$reward->id_user}}</td>
                     <td>
-                        <a class="btn btn-primary btn-sm" href="editar/{{ $reward->id }}">Editar</a> 
                         @csrf
                         @method('delete')
                         <a class="btn btn-danger btn-sm" href="/rewards/delete/{{ $reward->id }}">Delete</a>

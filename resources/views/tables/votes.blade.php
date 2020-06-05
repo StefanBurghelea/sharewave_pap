@@ -29,7 +29,6 @@
                         <td scope="row">{{$vote->id_post}}</td>
                         <td scope="row">{{$vote->id_user}}</td>
                     <td>
-                        <a class="btn btn-primary btn-sm" href="editar/{{ $vote->id }}">Editar</a> 
                         @csrf
                         @method('delete')
                         <a class="btn btn-danger btn-sm" href="/votes/delete/{{ $vote->id }}">Delete</a>
