@@ -55,7 +55,7 @@ Route::namespace('Api')->group(function(){
     Route::get('/comments', 'CommentController@comments');
     Route::get('/comments/{id}', 'CommentController@getComment');
 
-    //Route::post('/comments/', 'CommentController@store'); importante depois
+    Route::post('/comment/store', 'CommentController@store');
 
     //Route::delete('/comments/{id}', 'CommentController@delete');
 

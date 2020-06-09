@@ -29,4 +29,25 @@ class CommentController extends Controller
         return $comments;
 
     }
+
+    public function store(Request $request){
+
+        try{
+
+            $comment = new Comment;
+
+            $comment->comment = $request->comment;
+            $comment->id_post  = $request->id_post;
+            $comment->id_user = $request->id_user;
+            
+            $comment->save();
+
+            return ['insert' => 'ok'];
+
+        }catch(\Exception $erro){
+
+            return ['add' => 'erro'];
+        }
+
+    }
 }

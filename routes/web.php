@@ -24,6 +24,7 @@ Route::get('posts/delete/{id}','PostController@delete');
 
 Route::get('tables/locations','LocationController@index')->name('locations.index')->middleware('auth');
 Route::get('locations/delete/{id}','LocationController@delete');
+Route::post('store','LocationController@store')->name('location.store');
 
 Route::get('tables/comments','CommentController@index')->name('comments.index')->middleware('auth');
 Route::get('comments/delete/{id}','CommentController@delete');

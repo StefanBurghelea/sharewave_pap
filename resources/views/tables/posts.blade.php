@@ -49,6 +49,52 @@
 
           <br>
           <br>
+          
+
+          <div class="card border-primary text-center" style="max-width: 40rem;margin: 0 auto; float: none;">
+            <div class="card-header">Posts</div>
+            <div class="card-body text-primary">
+            <form>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Photo</label><br>
+              <input type="file" name="file" >
+            </div>
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Caption">
+              </div>
+              <div class="col">
+                <input type="number" class="form-control" placeholder="Rating">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+              <label for="exampleFormControlInput1">Location</label>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+              </select>              
+              </div>
+              <div class="col">
+              <label for="exampleFormControlInput1">User</label>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+              </select>              
+              </div>
+            </div>
+            
+            <div class="col-auto my-1">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+          </form>
+            </div>
+          </div>
+
+          
 
           <!-- <div class="uploadfile">
 

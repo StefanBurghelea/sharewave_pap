@@ -43,4 +43,42 @@
 
     </div>
 
+
+    <form method="POST" action="{{ route('location.store') }}" enctype="multipart/form-data">
+ 
+        @csrf
+        {{ method_field('POST') }}
+    
+            <div class="card border-primary text-center" style="max-width: 40rem;margin: 0 auto; float: none;">
+                <div class="card-header">Add Location</div>
+                    <div class="card-body text-primary">
+                   
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Location Name" id="location" name="location">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Beach Name" id="beach" name="beach">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <input type="number" class="form-control" placeholder="Latitude" id="latitude" name="latitude">
+                            </div>
+                            <div class="col">
+                                <input type="number" class="form-control" placeholder="Longitude" id="longitude" name="longitude">
+                            </div>
+                        </div>
+
+                        <div class="col-auto my-1">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                     
+                    </div>
+                </div>
+            </div>
+     
+</form>
+
 @endsection
