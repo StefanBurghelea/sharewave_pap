@@ -64,10 +64,10 @@
 
                         <div class="row">
                             <div class="col">
-                                <input type="number" class="form-control" placeholder="Latitude" id="latitude" name="latitude">
+                                <input type="number" class="form-control" placeholder="Latitude" id="latitude" name="latitude" min="-91" max="91">
                             </div>
                             <div class="col">
-                                <input type="number" class="form-control" placeholder="Longitude" id="longitude" name="longitude">
+                                <input type="number" class="form-control" placeholder="Longitude" id="longitude" name="longitude" min="-181" max="181">
                             </div>
                         </div>
 
