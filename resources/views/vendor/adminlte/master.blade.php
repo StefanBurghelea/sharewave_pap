@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
  
+    <link rel="shortcut icon" href="vendor\adminlte\dist\img\logo.png">
 
     @include('adminlte::plugins', ['type' => 'css'])
 
