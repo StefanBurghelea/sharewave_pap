@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use Illuminate\Support\Facades\DB;
+
 
 class UserController extends Controller
 {
@@ -23,6 +25,17 @@ class UserController extends Controller
         $user->delete();
     
         
+        return redirect('tables/users');
+
+    }
+
+    public function update(Request $request){
+
+        $email = $request->get('email');
+        $privilege = $request->get('privilege');
+
+        DB::update('update users set privileges = '.$privilege.' where email = ?', [$email]);
+
         return redirect('tables/users');
 
     }

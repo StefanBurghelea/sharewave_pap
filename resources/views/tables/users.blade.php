@@ -50,4 +50,33 @@
 
     </div>
 
+
+    <form method="POST" action="{{ route('user.update') }}" enctype="multipart/form-data">
+ 
+        @csrf
+        {{ method_field('POST') }}
+    
+            <div class="card border-primary text-center" style="max-width: 40rem;margin: 0 auto; float: none;">
+                <div class="card-header">Update User</div>
+                    <div class="card-body text-primary">
+                   
+                        <div class="row">
+                            <div class="col">
+                                <input type="email" class="form-control" placeholder="User's Email" id="email" name="email">
+                            </div>
+                            <div class="col">
+                                <input type="number" class="form-control" placeholder="Privilege" id="privilege" name="privilege" min="0" max="1">
+                            </div>
+                        </div>
+
+                        <div class="col-auto my-1">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                     
+                    </div>
+                </div>
+            </div>
+     
+</form>
+
 @endsection
